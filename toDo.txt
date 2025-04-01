@@ -1,0 +1,25 @@
+--- Prerequisites ---
+
+	x reading text from files (fstream) 
+	x format of how a .obj file works
+	x defining structs (a simple class in cpp)
+		[x] Header files for the structures and classes
+		[x] Instatiation of these classes. 
+	x for and while loops in cpp
+	x Dynamic Array data types (Use VECTORS instead??? then if that do
+es not work then look into dynamic arrays)
+	x functions and using #include for these
+	x clearing the screen using ANSI escape codes??? Actually wicked
+thing to know!
+	~ <chrono> for the timing anumation
+	- compiling and cMake (can i compile an executable?)
+
+--------------------------------------------------------------------------
+--- Things to do  ---
+
+	- Read the .obj file vertices and store them into a sturct
+	- Build all of the rotation matrices! (and figure out how I will
+do all of the matrix operations lol).
+	- Projection onto the x,y plane (ortographic without perspective??
+idk, look at all the different possibilities!) 
+	- 2d ASCII char buffer?????????? look this up!
