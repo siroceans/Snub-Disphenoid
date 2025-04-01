@@ -2,4 +2,4 @@
 #include "elements.h"
 #include <string>
 
-obj objRead(const std::string&filename);
+obj objRead(const std::string& filename);

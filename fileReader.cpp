@@ -14,8 +14,7 @@ obj objRead(const std::string& filename)
     while(getline(file, lines)) //while the thing keeps getting lines from the file...
     {
         std::string type; //initializing type variable to know if the line is either a vertex or face. 
-        std::cout << lines << std::endl; //print the lines for debugging??
-        std::ifstream linestream(lines); 
+        std::istringstream linestream(lines); 
         linestream >> type; //getting the first word of the .obj line
         if (type == "v") //if the line is giving the points of a vertex...
         {
