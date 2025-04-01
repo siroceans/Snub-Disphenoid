@@ -15,9 +15,8 @@ struct face
     face(int v1, int v2, int v3) : v1(v1), v2(v2), v3(v3) {}; //Constructor Method.
 }; 
 
-struct object
+struct obj
 {
     std::vector<vertex> vertices; //vector containing vertices of the object. 
     std::vector<face> faces; //vector contaning faces of the object.   
 };
-
