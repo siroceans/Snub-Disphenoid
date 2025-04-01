@@ -6,7 +6,8 @@
 *.dll
 *.so
 *.dylib
-
+*.sh
+*.txt
 # CMake build directory
 /build/
 CMakeFiles/
