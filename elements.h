@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <cmath>
 
 struct vertex
 {
@@ -46,3 +47,58 @@ struct obj
         }
     }
 };
+
+struct point
+{
+    int x, y; 
+}; 
+
+struct pointsVector //Structure for each point that is going to be printed
+{
+    std::vector<point> points; 
+    
+    void addObjPoints(obj& object)  //Method to grab points from the vertices of an obj. 
+    {
+        for(vertex& v : object.vertices)
+        {
+            point pn; //creating an empty point
+            pn.x = static_cast<int>(std::round(v.x)); 
+            pn.y = static_cast<int>(std::round(v.y)); 
+            points.push_back(pn); 
+        }
+    }
+
+    void shiftPoints() //function that shifts all of the points if they are off the screen!
+    {
+        //initializing variables for comparisons.
+        int largest = INT_MAX; 
+        int minx = largest; 
+        int miny = largest; 
+
+        //Finding the minimum values
+        for(point& p : points)
+        {
+            if(p.x < minx){
+                minx = p.x;
+            }           
+            if(p.y < miny){
+                miny = p.y; 
+            }
+        }
+        
+        //Shifting all of the points.
+        if(minx < 0){
+            for (point& p : points)
+            {
+                p.x = p.x - minx; 
+            }
+        }
+        if(miny < 0){
+            for(point& p : points)
+            {
+                p.y = p.y - miny; 
+            }
+        }
+
+    }
+}; 

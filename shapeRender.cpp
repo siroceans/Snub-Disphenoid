@@ -2,17 +2,23 @@
 #include <vector>
 #include "elements.h"
 
-void printPoints(int size, std::vector<vertex>& v)
+void printVertices(int size, pointsVector& pv) 
 {
+    //creating a cbuff with all of the current points
+    char marker = '*';
     std::vector<char> cbuff(size * size, ' '); 
-    for(int y = 0; y < size; y++) //looping thorugh each of the rows in the buffer. 
-    {  
-        for(int x = 0; x < size; x ++) //now going through each of the lines.
-        { 
-            if(x == (size-1))
-            {
-            }
-            std::cout << '\n'; 
+    for(point& p : pv.points)
+    {
+        cbuff[p.y * size + p.x] = marker; 
+    }
+    
+    //printing said cbuff into a sizexsize grid. 
+    for(int y = 0; y < size; y++)
+    {
+        for(int x = 0; x < size; x++)
+        {
+            std::cout << cbuff[y * size + x];//printing every character in cbuff
         }
+        std::cout << '\n'; //making sure we break line after going through each row.
     }
 }
