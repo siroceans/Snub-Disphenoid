@@ -8,6 +8,9 @@ int main()
     std::string sdfile = "objFiles/snubDisphenoid.obj"; 
     obj snubDisphenoid = objRead(sdfile); 
     
+    //Rendering a square aspect ratio screen. 
+    int width = 100; //chose width but it is both width and height
+        
     //debugging purposes
     /*
     std::cout << "vertices" << std::endl;
